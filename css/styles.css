@@ -17,10 +17,14 @@ body {
   -webkit-text-decoration-color: #0d7c1a;
           text-decoration-color: #0d7c1a;
   background-color: #980c0c;
-  padding: 20px;
+  padding: 25px;
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 200px;
+}
+
+.delivery:hover, .takeout:hover {
+  background-color: #860c0c;
 }
 
 .pizzaSubtotal {

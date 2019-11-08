@@ -1,4 +1,4 @@
-function Pizza(size, toppings) {
+function Pizza(size, toppings, deliveryCharge) {
     this.size = size,
     this.toppings = toppings,
     this.deliveryCharge = false;
@@ -13,7 +13,7 @@ Pizza.prototype.getPrice = function () {
         this.price += (toppingNum - 2) * 0.85;
     }
     if(this.deliveryCharge === true){
-        this.price += 5;
+        this.price += 3.75;
     } else if(this.deliveryCharge === false){
         this.price += 0;
     } else {

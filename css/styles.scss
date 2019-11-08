@@ -1,5 +1,6 @@
 $background-color: rgb(251,247,247);
 $red: rgb(152,12,12);
+$darker-red: rgb(134, 12, 12);
 $green: rgb(13,124,26);
 $grey-accent: rgb(195,190,190);
 $dark-accent: black;
@@ -26,10 +27,14 @@ body {
   font-style: italic;
   text-decoration-color: $green;
   background-color: $red;
-  padding: 20px;
+  padding: 25px;
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 200px;
+}
+
+.delivery:hover, .takeout:hover {
+  background-color: $darker-red;
 }
 
 .pizzaSubtotal {
