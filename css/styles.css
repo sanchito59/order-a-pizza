@@ -6,12 +6,17 @@ body {
   background-color: #cedbd8;
   padding: 20px;
   border-radius: 5px;
+  display: none;
 }
 
 .orderCart {
   background-color: #d1cece;
   padding: 20px;
   border-radius: 5px;
-  margin-right: 100px;
+  margin-right: 50px;
+}
+
+.italics {
+  font-style: italic;
 }
 /*# sourceMappingURL=styles.css.map */

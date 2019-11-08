@@ -26,18 +26,21 @@ Pizza.prototype.getPrice = function () {
 $(document).ready(function () {
     $('#orderForm').submit(function (event) {
         event.preventDefault();
+        // $('.orderCart').fadeOut(200);
+        $('.pizzaSubtotal').fadeIn();
         let toppingArray = [];
         console.log('Order Up!');
         const sizeSelect = $('option:selected').val();
         const toppingSelect = $('input:checked').each(function(){ //declared but only used to gather and immediately push
             toppingArray.push($(this).val());
         });
-        
+        let recieptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray);
         let price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
         $('#sizeSubtotal').html(sizeSelect);
-        $('#priceSubtotal').html(this.price);
+        $('#toppingSubtotal').html('<li>' + recieptToppings + '</li>');
+        $('#priceSubtotal').html(price);
     })
 });

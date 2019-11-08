@@ -10,11 +10,16 @@ body {
   background-color: rgb(206, 219, 216);
   padding: 20px;
   border-radius: 5px;
+  display: none;
 }
 
 .orderCart {
   background-color: rgb(209, 206, 206);
   padding: 20px;
   border-radius: 5px;
-  margin-right: 100px;
+  margin-right: 50px;
+}
+
+.italics {
+  font-style: italic;
 }
