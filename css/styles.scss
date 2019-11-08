@@ -16,6 +16,15 @@ body {
   height: 100vh;
 }
 
+i {
+  font-size: 75px;
+}
+
+#disclaimer {
+  font-size: 12px;
+  color: $grey-accent;
+}
+
 #orderPage {
   // display: none;
 }

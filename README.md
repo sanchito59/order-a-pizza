@@ -5,6 +5,7 @@
 ### Description
 
 This application...
+Click [here](https://sanchito59.github.io/order-a-pizza/) to visit the live Github Page.
 
 ### Setup/Installation Requirements
 
@@ -12,7 +13,7 @@ This application...
 
 #### Zip:
 
-1. Click [here](exampleURLToUserRepository) to go to the repository location where you will find the clone/download menu.
+1. Click [here](https://github.com/sanchito59/order-a-pizza) to go to the repository location where you will find the clone/download menu.
 
  2. Navigate to the directory (folder) that contains your browser's downloads.
  3. Double-click on **Order-A-Pizza** directory (folder).
@@ -22,7 +23,7 @@ This application...
 #### Clone: 
 
  1. To clone the repository, from your terminal or command line enter, "git remote add exampleCredentials cloneLinkURL"
- 2. Clone Link: https://github.com/userName/exampleRepositoryURL.git
+ 2. Clone Link: https://github.com/sanchito59/order-a-pizza.git
  3. Once the repository finishes downloading, open index.html.
 
 ### Specifications:
