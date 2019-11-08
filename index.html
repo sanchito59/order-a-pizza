@@ -22,12 +22,13 @@
                         <label>Select a Size: </label>
                         <select class="form-control" id="sizeSelect">
                             <option>- Size -</option>
-                            <option value="5">Personal ($5)</option>
-                            <option value="7">Small ($7)</option>
-                            <option value="9">Large ($9)</option>
+                            <option value="Personal">Personal ($5)</option>
+                            <option value="Medium">Medium ($7)</option>
+                            <option value="Large">Large ($9)</option>
                         </select>
                     </div>
                     <hr>
+                    <h6>First Two Toppings Always Free!</h6>
                     <h5>Veggie Toppings:</h5>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="mushroom" name="topping">
@@ -103,6 +104,11 @@
             </div>
             <div class="col-lg-5 pizzaSubtotal">
                 <h3>Subtotal:</h3>
+                <h5>Size: <span id="sizeSubtotal"></span></h5>
+                <h5>Toppings: </h5>
+                <ul id="toppingSubtotal"></ul>
+                <h5>Price: <span id="priceSubtotal"></span></h5>
+                
             </div>
         </div>
     </div>

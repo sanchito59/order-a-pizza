@@ -6,12 +6,16 @@ function Pizza(size, toppings) {
 
 Pizza.prototype.getPrice = function () {
     const toppingNum = this.toppings.length;
-    this.price += toppingNum * 0.85;
-    if(this.size === 9){
+    if(toppingNum <= 2){
+        this.price += 0;
+    } else {
+    this.price += (toppingNum - 2) * 0.85;
+    }
+    if(this.size === 'Large'){
         this.price += 9;
-    } else if(this.size === 7){
+    } else if(this.size === 'Medium'){
         this.price += 7;
-    } else if(this.size === 5){
+    } else if(this.size === 'Personal'){
         this.price += 5;
     } else {
         console.log('Please pick a size.');       
@@ -24,8 +28,8 @@ $(document).ready(function () {
         event.preventDefault();
         let toppingArray = [];
         console.log('Order Up!');
-        const sizeSelect = parseInt($('option:selected').val());
-        const toppingSelect = $('input:checked').each(function(){
+        const sizeSelect = $('option:selected').val();
+        const toppingSelect = $('input:checked').each(function(){ //declared but only used to gather and immediately push
             toppingArray.push($(this).val());
         });
         
@@ -33,5 +37,7 @@ $(document).ready(function () {
         let price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
+        $('#sizeSubtotal').html(sizeSelect);
+        $('#priceSubtotal').html(this.price);
     })
 });
