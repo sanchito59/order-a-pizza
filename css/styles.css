@@ -14,9 +14,9 @@ body {
   color: #fbf7f7;
   text-decoration: underline;
   font-style: italic;
-  -webkit-text-decoration-color: #0d7c1a;
-          text-decoration-color: #0d7c1a;
-  background-color: #980c0c;
+  -webkit-text-decoration-color: #0d881b;
+          text-decoration-color: #0d881b;
+  background-color: #b30f0f;
   padding: 25px;
   border-radius: 5px;
   margin: 0 auto;
@@ -24,7 +24,7 @@ body {
 }
 
 .delivery:hover, .takeout:hover {
-  background-color: #860c0c;
+  background-color: #940d0d;
 }
 
 .pizzaSubtotal {
