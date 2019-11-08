@@ -29,24 +29,23 @@ This application...
 
 |Item| Value  |
 |---|---|
-|Toppings|$0.75 per|
+|Toppings|$0.85 per|
 |Personal Pizza|$5|
 |Medium Pizza|$7|
 |Large Pizza|$9|
-
 
 |Input|Output|
 |---|---|
 |Customer Orders a Personal pizza|$5|
 |Customer Orders a Medium Pizza|$7|
 |Customer Orders a Large Pizza|$9|
-|Customer Orders a Large, two-topping pizza|$10.50|
+|Customer Orders a Large, two-topping pizza|$10.70|
 
 ### Technologies Used
 
- - HTML5
- - CSS3/Boostrap/SCSS
- - JavaScript/jQuery
+- HTML5
+- CSS3/Boostrap/SCSS
+- JavaScript/jQuery
 
 ### Support and Contact
 
