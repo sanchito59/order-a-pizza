@@ -18,7 +18,12 @@ i {
   color: #c3bebe;
 }
 
+#orderPage {
+  display: none;
+}
+
 .delivery, .takeout {
+  text-align: center;
   height: 200px;
   color: #fbf7f7;
   text-decoration: underline;
@@ -28,8 +33,7 @@ i {
   background-color: #b30f0f;
   padding: 25px;
   border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 200px;
+  margin: 15px auto;
 }
 
 .delivery:hover, .takeout:hover {

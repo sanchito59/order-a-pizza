@@ -26,10 +26,11 @@ i {
 }
 
 #orderPage {
-  // display: none;
+  display: none;
 }
 
 .delivery, .takeout {
+  text-align: center;
   height: 200px;
   color: $background-color;
   text-decoration: underline;
@@ -38,8 +39,7 @@ i {
   background-color: $red;
   padding: 25px;
   border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 200px;
+  margin: 15px auto;
 }
 
 .delivery:hover, .takeout:hover {

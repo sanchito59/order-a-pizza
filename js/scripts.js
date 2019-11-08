@@ -1,7 +1,8 @@
-function Pizza(size, toppings, deliveryCharge) {
+function Pizza(size, toppings, deliveryCharge, cheese) {
     this.size = size,
     this.toppings = toppings,
-    this.deliveryCharge = deliveryCharge;
+    this.deliveryCharge = deliveryCharge,
+    this.cheese = cheese,
     this.price = 0
 }
 
@@ -22,12 +23,12 @@ Pizza.prototype.getPrice = function () {
     } else {
         this.price += (toppingNum - 2) * 0.85;
     }
-    if(this.deliveryCharge === true){
+    if (this.deliveryCharge === true) {
         this.price += 3.75;
-    } else if(this.deliveryCharge === false){
+    } else if (this.deliveryCharge === false) {
         this.price += 0;
     } else {
-        console.log('Uh oh');     
+        console.log('Uh oh');
     }
     if (this.size === 'Large ($9)') {
         this.price += 9;
@@ -52,7 +53,20 @@ function toppingSubtotalCheck(arr) {
 }
 
 $(document).ready(function () {
-    // console.log(this.deliveryCharge);
+    // $('.delivery').on('click', function (deliveryCharge) {
+    //     deliveryCharge = true;
+    //     console.log(this.deliveryCharge);
+    //     $('#deliveryTakeoutPage').fadeOut();
+    //     $('#orderPage').fadeIn();
+    //     return deliveryCharge;
+    // })
+    // $('.takeout').on('click', function (deliveryCharge) {
+    //     deliveryCharge = false;
+    //     console.log(this.deliveryCharge);
+    //     $('#deliveryTakeoutPage').fadeOut();
+    //     $('#orderPage').fadeIn();
+    //     return deliveryCharge;
+    // })
     $('#orderForm').submit(function (event) {
         event.preventDefault();
         let toppingArray = [];
@@ -64,7 +78,7 @@ $(document).ready(function () {
         const cheeseRadio = $("input:radio:checked").prop("checked", true).val();
         console.log(cheeseRadio);
         const receiptToppings = toppingArray.join(", ")
-        let pizza = new Pizza(sizeSelect, toppingArray, true, cheeseRadio);
+        let pizza = new Pizza(sizeSelect, toppingArray, deliveryCharge, cheeseRadio);
         const price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
