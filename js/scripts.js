@@ -6,14 +6,14 @@ function Pizza(size, toppings) {
 
 Construction.prototype.getPrice = function () {
     this.toppings.forEach(function(topping){
-        this.price += 1;
+        this.price += 0.75;
     }) 
     if(this.size === 'Large'){
-        this.price += 7;
+        this.price += 9;
     } else if(this.size === 'Medium'){
-        this.price += 5;
+        this.price += 7;
     } else if(this.size === 'Personal'){
-        this.price += 3;
+        this.price += 5;
     } else {
         console.log('Please pick a size.');       
     }
