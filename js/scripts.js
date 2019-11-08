@@ -1,30 +1,38 @@
 function Pizza(size, toppings) {
     this.size = size,
     this.toppings = toppings,
+    this.deliveryCharge = false;
     this.price = 0
 }
 
 Pizza.prototype.getPrice = function () {
     const toppingNum = this.toppings.length;
-    if(toppingNum <= 2){
+    if (toppingNum <= 2) {
         this.price += 0;
     } else {
-    this.price += (toppingNum - 2) * 0.85;
+        this.price += (toppingNum - 2) * 0.85;
     }
-    if(this.size === 'Large'){
+    if(this.deliveryCharge === true){
+        this.price += 5;
+    } else if(this.deliveryCharge === false){
+        this.price += 0;
+    } else {
+        console.log('Uh oh');     
+    }
+    if (this.size === 'Large ($9)') {
         this.price += 9;
-    } else if(this.size === 'Medium'){
+    } else if (this.size === 'Medium ($7)') {
         this.price += 7;
-    } else if(this.size === 'Personal'){
+    } else if (this.size === 'Personal ($5)') {
         this.price += 5;
     } else {
-        console.log('Please pick a size.');       
+        console.log('Please pick a size.');
     }
     return this.price.toFixed(2);
 }
 
-function toppingSubtotalCheck (arr){
-    if(arr.length === 0){
+function toppingSubtotalCheck(arr) {
+    if (arr.length === 0) {
         $('#toppingsSubtotalHeader').hide();
         $('#toppingSubtotal').hide();
     } else {
@@ -34,23 +42,30 @@ function toppingSubtotalCheck (arr){
 }
 
 $(document).ready(function () {
+    // console.log(this.deliveryCharge);
+    $('.delivery').on('click', function () {
+        this.deliveryCharge = true;
+        console.log(this.deliveryCharge);
+        $('#deliveryTakeoutPage').fadeOut();
+        $('#orderPage').fadeIn();
+    })
     $('#orderForm').submit(function (event) {
         event.preventDefault();
         let toppingArray = [];
-        // $('.orderCart').fadeOut(200);
         $('.pizzaSubtotal').fadeIn();
-        console.log('Order Up!');
         const sizeSelect = $('option:selected').val();
-        const toppingSelect = $('input:checked').each(function(){ //declared but only used to gather and immediately push
+        const toppingSelect = $('input[name="topping"]:checked').each(function () { //declared but only used to gather and immediately push
             toppingArray.push($(this).val());
         });
-        let receiptToppings = toppingArray.join(", ")
+        const cheeseRadio = $("input:radio:checked").prop("checked", true).val();
+        console.log(cheeseRadio);
+        const receiptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray);
-        let price = pizza.getPrice();
+        const price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
         $('#sizeSubtotal').html(sizeSelect);
-        $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + toppingArray.length + ' x $0.85)</li>');
+        $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + (toppingArray.length) + ' x $0.85)</li>');
         $('#priceSubtotal').html(price);
         toppingSubtotalCheck(toppingArray);
     })

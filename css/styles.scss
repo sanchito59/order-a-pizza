@@ -5,19 +5,29 @@ $grey-accent: rgb(195,190,190);
 $dark-accent: black;
 
 body {
+  padding: 20px;
   margin: 0px;
   background-color: $background-color;
 }
 
-.deliveryTakeoutPage {
+#deliveryTakeoutPage {
   background-color: $background-color;
   height: 100vh;
+}
+
+#orderPage {
+  // display: none;
 }
 
 .delivery, .takeout {
   height: 200px;
   color: $background-color;
+  text-decoration: underline;
+  font-style: italic;
+  text-decoration-color: $green;
   background-color: $red;
+  padding: 20px;
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: 200px;
 }
@@ -27,6 +37,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   display: none;
+  height: 400px;
 }
 
 .orderCart {

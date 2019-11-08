@@ -1,9 +1,10 @@
 body {
+  padding: 20px;
   margin: 0px;
   background-color: #fbf7f7;
 }
 
-.deliveryTakeoutPage {
+#deliveryTakeoutPage {
   background-color: #fbf7f7;
   height: 100vh;
 }
@@ -11,7 +12,13 @@ body {
 .delivery, .takeout {
   height: 200px;
   color: #fbf7f7;
+  text-decoration: underline;
+  font-style: italic;
+  -webkit-text-decoration-color: #0d7c1a;
+          text-decoration-color: #0d7c1a;
   background-color: #980c0c;
+  padding: 20px;
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: 200px;
 }
@@ -21,6 +28,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   display: none;
+  height: 400px;
 }
 
 .orderCart {
