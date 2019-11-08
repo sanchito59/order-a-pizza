@@ -5,16 +5,6 @@ function Pizza(size, toppings, deliveryCharge, price) {
     this.price = 0
 }
 
-// Pizza.prototype.deliveryCharge = function(){
-//     $('.delivery').on('click', function () {
-//         this.deliveryCharge = true;
-//         console.log(this.deliveryCharge);
-//         $('#deliveryTakeoutPage').fadeOut();
-//         $('#orderPage').fadeIn();
-//     })
-//     return this.deliveryCharge;
-// }
-
 Pizza.prototype.getPrice = function () {
     const toppingNum = this.toppings.length;
     if (toppingNum <= 2) {
@@ -53,11 +43,13 @@ function toppingSubtotalCheck(arr) {
 
 $(document).ready(function () {
     let deliveryCharge = false;
+    let deliveryFeeSubtotal = 0;
     $('.delivery').on('click', function () {
         deliveryCharge = true;
+        deliveryFeeSubtotal += 3.75
         $('#deliveryTakeoutPage').fadeOut();
         $('#orderPage').fadeIn();
-        return deliveryCharge;
+        return deliveryCharge, deliveryFeeSubtotal;
     })
     $('.takeout').on('click', function () {
         deliveryCharge = false;
@@ -74,16 +66,12 @@ $(document).ready(function () {
             toppingArray.push($(this).val());
         });
         const cheeseRadio = $("input:radio:checked").prop("checked", true).val();
-        console.log(cheeseRadio);
         const receiptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray, deliveryCharge, cheeseRadio);
-        console.log(this);
-        
         const price = pizza.getPrice();
-        console.log(pizza);
-        console.log(price);
         $('#sizeSubtotal').html(sizeSelect);
         $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + (toppingArray.length) + ' x $0.85)</li>');
+        $('#deliveryFeeSubtotal').html(deliveryFeeSubtotal);
         $('#priceSubtotal').html(price);
         toppingSubtotalCheck(toppingArray);
     })
