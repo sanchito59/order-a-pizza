@@ -30,6 +30,7 @@ This application...
 |Item| Value  |
 |---|---|
 |Toppings|$0.85 per|
+|First Two Toppings|$0.00|
 |Personal Pizza|$5|
 |Medium Pizza|$7|
 |Large Pizza|$9|
@@ -39,7 +40,9 @@ This application...
 |Customer Orders a Personal pizza|$5|
 |Customer Orders a Medium Pizza|$7|
 |Customer Orders a Large Pizza|$9|
-|Customer Orders a Large, two-topping pizza|$10.70|
+|Customer Orders a Large, two-topping pizza|$9|
+|Customer Orders a Medium, three-topping pizza|$7.85|
+|Customer Orders a Large, four-topping pizza|$10.70|
 
 ### Technologies Used
 
