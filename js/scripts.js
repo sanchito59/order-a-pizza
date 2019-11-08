@@ -7,7 +7,7 @@ function Pizza(size, toppings) {
 Pizza.prototype.getPrice = function () {
     this.toppings.forEach(function(topping){
         this.price += 0.75;
-    }) 
+    })
     if(this.size === 9){
         this.price += 9;
     } else if(this.size === 7){
@@ -20,28 +20,18 @@ Pizza.prototype.getPrice = function () {
     return this.price;
 }
 
-
 $(document).ready(function () {
     $('#orderForm').submit(function (event) {
-        let toppingArray = [];
         event.preventDefault();
+        let toppingArray = [];
         console.log('Order Up!');
         const sizeSelect = parseInt($('option:selected').val());
-        const toppingSelect = $('input[name="topping"]:checked').each(function(){
+        const toppingSelect = $('input:checked').each(function(){
             toppingArray.push($(this).val());
         });
-        toppingArray.push(toppingSelect);
-        console.log(toppingArray);
-        console.log(sizeSelect);
-        console.log(toppingSelect.length);
-
         let pizza = new Pizza(sizeSelect, toppingArray);
         let price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
-  
-        
-        
-
     })
 });
