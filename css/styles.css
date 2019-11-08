@@ -1,5 +1,19 @@
 body {
-  margin: 25px;
+  margin: 0px;
+  background-color: #fbf7f7;
+}
+
+.deliveryTakeoutPage {
+  background-color: #fbf7f7;
+  height: 100vh;
+}
+
+.delivery, .takeout {
+  height: 200px;
+  color: #fbf7f7;
+  background-color: #980c0c;
+  margin: 0 auto;
+  margin-top: 200px;
 }
 
 .pizzaSubtotal {

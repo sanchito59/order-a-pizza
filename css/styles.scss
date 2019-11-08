@@ -1,9 +1,25 @@
-$background-color: white;
-$grey-accent: grey;
+$background-color: rgb(251,247,247);
+$red: rgb(152,12,12);
+$green: rgb(13,124,26);
+$grey-accent: rgb(195,190,190);
 $dark-accent: black;
 
 body {
-  margin: 25px;
+  margin: 0px;
+  background-color: $background-color;
+}
+
+.deliveryTakeoutPage {
+  background-color: $background-color;
+  height: 100vh;
+}
+
+.delivery, .takeout {
+  height: 200px;
+  color: $background-color;
+  background-color: $red;
+  margin: 0 auto;
+  margin-top: 200px;
 }
 
 .pizzaSubtotal {

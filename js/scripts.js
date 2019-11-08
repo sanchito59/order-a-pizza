@@ -23,24 +23,35 @@ Pizza.prototype.getPrice = function () {
     return this.price.toFixed(2);
 }
 
+function toppingSubtotalCheck (arr){
+    if(arr.length === 0){
+        $('#toppingsSubtotalHeader').hide();
+        $('#toppingSubtotal').hide();
+    } else {
+        $('#toppingsSubtotalHeader').show();
+        $('#toppingSubtotal').show();
+    }
+}
+
 $(document).ready(function () {
     $('#orderForm').submit(function (event) {
         event.preventDefault();
+        let toppingArray = [];
         // $('.orderCart').fadeOut(200);
         $('.pizzaSubtotal').fadeIn();
-        let toppingArray = [];
         console.log('Order Up!');
         const sizeSelect = $('option:selected').val();
         const toppingSelect = $('input:checked').each(function(){ //declared but only used to gather and immediately push
             toppingArray.push($(this).val());
         });
-        let recieptToppings = toppingArray.join(", ")
+        let receiptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray);
         let price = pizza.getPrice();
         console.log(pizza);
         console.log(price);
         $('#sizeSubtotal').html(sizeSelect);
-        $('#toppingSubtotal').html('<li>' + recieptToppings + '</li>');
+        $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + toppingArray.length + ' x $0.85)</li>');
         $('#priceSubtotal').html(price);
+        toppingSubtotalCheck(toppingArray);
     })
 });
