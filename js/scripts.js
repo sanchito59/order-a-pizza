@@ -4,7 +4,7 @@ function Pizza(size, toppings) {
     this.price = 0
 }
 
-Construction.prototype.getPrice = function () {
+Pizza.prototype.getPrice = function () {
     this.toppings.forEach(function(topping){
         this.price += 0.75;
     }) 
@@ -23,6 +23,11 @@ Construction.prototype.getPrice = function () {
 $(document).ready(function () {
     $('#orderForm').submit(function (event) {
         event.preventDefault();
+        console.log('Order Up!');
+        const sizeSelect = parseInt($('option:selected').val());
+        console.log(sizeSelect);
+        
+        
 
     })
 });

@@ -13,19 +13,18 @@
 
 <body>
     <h1>Order-A-Pizza</h1>
-
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 orderCart">
                 <h3>Order:</h3>
                 <form id="orderForm">
                     <div class="form-group">
                         <label>Select a Size: </label>
                         <select class="form-control" id="sizeSelect">
                             <option>- Size -</option>
-                            <option>Personal ($5)</option>
-                            <option>Small ($7)</option>
-                            <option>Large ($9)</option>
+                            <option value="5">Personal ($5)</option>
+                            <option value="7">Small ($7)</option>
+                            <option value="9">Large ($9)</option>
                         </select>
                     </div>
                     <hr>
@@ -98,10 +97,12 @@
                             Ham
                         </label>
                     </div>
+                    <br>
+                    <button type="submit" class="btn btn-md btn-info">Place Order</button>
                 </form>
             </div>
-            <div class="col-lg-5">
-                <h3>Subtotal: </h3>
+            <div class="col-lg-5 pizzaSubtotal">
+                <h3>Subtotal:</h3>
             </div>
         </div>
     </div>
