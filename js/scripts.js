@@ -57,6 +57,7 @@ $(document).ready(function () {
         $('#deliveryTakeoutPage').fadeOut();
         $('#orderPage').fadeIn();
         $('.deliveryInputDiv').hide();
+        $('.deliveryReceiptDiv').hide();
         return deliveryCharge;
     })
     $('#orderForm').submit(function (event) {
