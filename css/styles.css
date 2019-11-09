@@ -7,9 +7,10 @@ body {
   width: 100%;
   height: 50px;
   position: fixed;
+  z-index: 1;
   margin-bottom: 30px;
   background-color: #0d881b;
-  color: #fbf7f7;
+  color: white;
   font-weight: bold;
 }
 
@@ -40,11 +41,23 @@ i {
   color: #c3bebe;
 }
 
-#orderPage {
-  display: none;
+#deliveryPageContent {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #0d881b;
 }
 
-.delivery, .takeout {
+#deliveryPageContent {
+  color: white;
+  text-align: center;
+  padding: 7.5px;
+  height: 90px;
+}
+
+.delivery,
+.takeout {
   text-align: center;
   height: 200px;
   color: #fbf7f7;
@@ -58,8 +71,13 @@ i {
   margin: 100px auto;
 }
 
-.delivery:hover, .takeout:hover {
+.delivery:hover,
+.takeout:hover {
   background-color: #940d0d;
+}
+
+#orderPage {
+  display: none;
 }
 
 .pizzaSubtotal {
@@ -68,6 +86,7 @@ i {
   border-radius: 5px;
   display: none;
   height: 400px;
+  margin-top: 40px;
 }
 
 .orderCart {
@@ -75,6 +94,7 @@ i {
   padding: 20px;
   border-radius: 5px;
   margin-right: 50px;
+  margin-top: 40px;
 }
 
 .italics {

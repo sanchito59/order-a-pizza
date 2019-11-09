@@ -1,8 +1,8 @@
-$background-color: rgb(251,247,247);
+$background-color: rgb(251, 247, 247);
 $red: rgb(179, 15, 15);
 $darker-red: rgb(148, 13, 13);
 $green: rgb(13, 136, 27);
-$grey-accent: rgb(195,190,190);
+$grey-accent: rgb(195, 190, 190);
 $dark-accent: black;
 
 body {
@@ -14,9 +14,10 @@ body {
   width: 100%;
   height: 50px;
   position: fixed;
+  z-index: 1;
   margin-bottom: 30px;
   background-color: $green;
-  color: $background-color;
+  color: white;
   font-weight: bold;
 }
 
@@ -47,11 +48,23 @@ i {
   color: $grey-accent;
 }
 
-#orderPage {
-  display: none;
+#deliveryPageContent {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  bottom: 0px;
+  background-color: $green;
 }
 
-.delivery, .takeout {
+#deliveryPageContent {
+  color: white;
+  text-align: center;
+  padding: 7.5px;
+  height: 90px;
+}
+
+.delivery,
+.takeout {
   text-align: center;
   height: 200px;
   color: $background-color;
@@ -64,8 +77,13 @@ i {
   margin: 100px auto;
 }
 
-.delivery:hover, .takeout:hover {
+.delivery:hover,
+.takeout:hover {
   background-color: $darker-red;
+}
+
+#orderPage {
+  display: none;
 }
 
 .pizzaSubtotal {
@@ -74,6 +92,7 @@ i {
   border-radius: 5px;
   display: none;
   height: 400px;
+  margin-top: 40px;
 }
 
 .orderCart {
@@ -81,6 +100,7 @@ i {
   padding: 20px;
   border-radius: 5px;
   margin-right: 50px;
+  margin-top: 40px;
 }
 
 .italics {
