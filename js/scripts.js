@@ -49,30 +49,42 @@ $(document).ready(function () {
         deliveryFeeSubtotal += 3.75
         $('#deliveryTakeoutPage').fadeOut();
         $('#orderPage').fadeIn();
+        $('.deliveryInputDiv').show();
         return deliveryCharge, deliveryFeeSubtotal;
     })
     $('.takeout').on('click', function () {
         deliveryCharge = false;
         $('#deliveryTakeoutPage').fadeOut();
         $('#orderPage').fadeIn();
+        $('.deliveryInputDiv').hide();
         return deliveryCharge;
     })
     $('#orderForm').submit(function (event) {
         event.preventDefault();
         let toppingArray = [];
-        $('.pizzaSubtotal').fadeIn();
         const sizeSelect = $('option:selected').val();
         const toppingSelect = $('input[name="topping"]:checked').each(function () { //declared but only used to gather and immediately push
             toppingArray.push($(this).val());
         });
         const cheeseRadio = $("input:radio:checked").prop("checked", true).val();
+
+        const deliveryName = $('#deliveryName').val();
+        const deliveryAddress = $('#deliveryAddress').val();
+        const deliveryBldg = $('#deliveryAptBldg').val();
+        const deliveryZip =  $('#deliveryZip').val();
+
+        console.log(deliveryName + " " + deliveryAddress + " " + deliveryBldg + " " + deliveryZip + ".");
+        
+        
         const receiptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray, deliveryCharge, cheeseRadio);
         const price = pizza.getPrice();
+        $('.pizzaSubtotal').fadeIn();
         $('#sizeSubtotal').html(sizeSelect);
         $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + (toppingArray.length) + ' x $0.85)</li>');
         $('#deliveryFeeSubtotal').html(deliveryFeeSubtotal);
         $('#priceSubtotal').html(price);
+        $('#deliveryReceipt').html(deliveryName + "<br>" + deliveryAddress + "<br>" + deliveryZip);
         toppingSubtotalCheck(toppingArray);
     })
 });

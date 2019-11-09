@@ -152,7 +152,14 @@
                                 Anchovy
                             </label>
                         </div>
-                        <br>
+                        <hr>
+                        <div class="form-group deliveryInputDiv">
+                            <h6>Delivery Information: </h6>
+                            <input type="text" class="deliveryInputs" id="deliveryName" placeholder="Name*">
+                            <input type="text" class="deliveryInputs" id="deliveryAddress" placeholder="Street Address*">
+                            <input type="text" class="deliveryInputs" id="deliveryAptBldg" placeholder="Apt/Suite/Bldg*">
+                            <input type="text" class="deliveryInputs" id="deliveryZip" placeholder="Zip*">
+                        </div>
                         <button type="submit" class="btn btn-md btn-info">Place Order</button>
                     </form>
                 </div>
@@ -162,6 +169,9 @@
                     <h5 id="toppingsSubtotalHeader">Toppings: </h5>
                     <ul id="toppingSubtotal"></ul>
                     <h5>Delivery Fee: $<span id="deliveryFeeSubtotal">0</span></h5>
+                    <div class="deliveryReceiptDiv">
+                        <p id="deliveryReceipt"></p>
+                    </div>
                     <hr>
                     <h5>Price: $<span id="priceSubtotal"></span></h5>
                 </div>

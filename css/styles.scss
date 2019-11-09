@@ -86,6 +86,17 @@ i {
   display: none;
 }
 
+.deliveryInputs {
+  border-radius: 10px;
+  padding: 2px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.deliveryInputs:focus {
+  outline: none;
+}
+
 .pizzaSubtotal {
   background-color: rgb(206, 219, 216);
   padding: 20px;
