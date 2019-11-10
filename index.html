@@ -12,8 +12,10 @@
 <body>
     <div id="deliveryTakeoutPage">
         <div class="navTop">
-            <img src="css/pizza-slice.svg" width='50px' class="navIcon" alt="">
-            <p class="navTitle">Papa John Misty</p>
+            <a href="https://sanchito59.github.io/order-a-pizza/"> <img src="css/pizza-slice.svg" width='50px'
+                    class="navIcon" alt="vector graphic of a pizza slice dripping melted cheese">
+                <p class="navTitle">Papa John Misty</p>
+            </a>
         </div>
         <div class="row">
             <div class="col-2 delivery">
@@ -32,11 +34,11 @@
     </div>
     <div id="orderPage">
         <div class="navTop">
-            <img src="css/pizza-slice.svg" width='50px' class="navIcon"
-                alt="vector graphic of a pizza slice dripping melted cheese">
-            <p class="navTitle">Papa John Misty</p>
+            <a href="https://sanchito59.github.io/order-a-pizza/"> <img src="css/pizza-slice.svg" width='50px'
+                    class="navIcon" alt="vector graphic of a pizza slice dripping melted cheese">
+                <p class="navTitle">Papa John Misty</p>
+            </a>
         </div>
-        <h1>Order-A-Pizza</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 orderCart">
@@ -71,6 +73,7 @@
                                 Four Cheese
                             </label>
                         </div>
+                        <hr>
                         <h6 class="italics">First Two Toppings Always Free!</h6>
                         <h5>Veggie Toppings:</h5>
                         <div class="form-check">
@@ -156,12 +159,12 @@
                         <hr>
                         <div class="form-group deliveryInputDiv">
                             <h6>Delivery Information: </h6>
-                            <input type="text" class="deliveryInputs" id="deliveryName" placeholder="Name*">
-                            <input type="text" class="deliveryInputs" id="deliveryAddress"
-                                placeholder="Street Address*">
-                            <input type="text" class="deliveryInputs" id="deliveryAptBldg"
-                                placeholder="Apt/Suite/Bldg*">
-                            <input type="text" class="deliveryInputs" id="deliveryZip" placeholder="Zip*">
+                            <input type="text" class="deliveryInputs" id="deliveryName" placeholder="Name*" required>
+                            <input type="text" class="deliveryInputs" id="deliveryAddress" placeholder="Street Address*"
+                                required>
+                            <input type="text" class="deliveryInputs" id="deliveryAptBldg" placeholder="Apt/Suite/Bldg*"
+                                required>
+                            <input type="text" class="deliveryInputs" id="deliveryZip" placeholder="Zip*" required>
                         </div>
                         <button type="submit" class="btn btn-md btn-info">Place Order</button>
                     </form>

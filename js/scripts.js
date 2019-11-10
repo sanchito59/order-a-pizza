@@ -56,7 +56,7 @@ $(document).ready(function () {
         deliveryCharge = false;
         $('#deliveryTakeoutPage').fadeOut();
         $('#orderPage').fadeIn();
-        $('.deliveryInputDiv').hide();
+        $('.deliveryInputDiv').remove();
         $('.deliveryReceiptDiv').hide();
         return deliveryCharge;
     })
@@ -81,7 +81,7 @@ $(document).ready(function () {
         $('#toppingSubtotal').html('<li>' + receiptToppings + ' (' + (toppingArray.length) + ' x $0.85)</li>');
         $('#deliveryFeeSubtotal').html(deliveryFeeSubtotal);
         $('#priceSubtotal').html(price);
-        $('#deliveryReceipt').html(deliveryName + "<br>" + deliveryAddress + "<br>" + deliveryZip);
+        $('#deliveryReceipt').html(deliveryName + "<br>" + deliveryAddress + "<br> Portland, OR <br>" + deliveryZip + "<br> <p class='italics'> Your order has been sent to the kitchen!</p>");
         toppingSubtotalCheck(toppingArray);
     })
 });
