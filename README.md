@@ -4,7 +4,8 @@
 
 ### Description
 
-This application...
+This application will take in information from a customer and a construct a 'pizza' object that contains information such as size, number of toppings, and delivery or takeout and then pass that information into an algorithm to determine the price the customer will pay. It is built primarily using javascript Objects, Arrays, and Loops.
+
 Click [here](https://sanchito59.github.io/order-a-pizza/) to visit the live Github Page.
 
 ### Setup/Installation Requirements

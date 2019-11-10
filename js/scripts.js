@@ -68,15 +68,11 @@ $(document).ready(function () {
             toppingArray.push($(this).val());
         });
         const cheeseRadio = $("input:radio:checked").prop("checked", true).val();
-
         const deliveryName = $('#deliveryName').val();
         const deliveryAddress = $('#deliveryAddress').val();
         const deliveryBldg = $('#deliveryAptBldg').val();
         const deliveryZip =  $('#deliveryZip').val();
-
         console.log(deliveryName + " " + deliveryAddress + " " + deliveryBldg + " " + deliveryZip + ".");
-        
-        
         const receiptToppings = toppingArray.join(", ")
         let pizza = new Pizza(sizeSelect, toppingArray, deliveryCharge, cheeseRadio);
         const price = pizza.getPrice();
