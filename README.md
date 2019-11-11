@@ -33,6 +33,8 @@ Click [here](https://sanchito59.github.io/order-a-pizza/) to visit the live Gith
 |---|---|
 |Toppings|$0.85 per|
 |First Two Toppings|$0.00|
+|Delivery|$3.75|
+|Carryout|$0.00|
 |Personal Pizza|$5|
 |Medium Pizza|$7|
 |Large Pizza|$9|
@@ -45,6 +47,7 @@ Click [here](https://sanchito59.github.io/order-a-pizza/) to visit the live Gith
 |Customer Orders a Large, two-topping pizza|$9|
 |Customer Orders a Medium, three-topping pizza|$7.85|
 |Customer Orders a Large, four-topping pizza|$10.70|
+|Customer Orders a Large, four-topping pizza with delivery|$14.45|
 
 ### Technologies Used
 
